@@ -8,9 +8,23 @@ pipeline{
        }
        stage("build"){
            steps{
-           sh 'mvn packagessss'
+           sh 'mvn package'
            }
        }
        
+    }
+	post {
+        failure {
+            script {
+                currentBuild.result = 'FAILURE'
+            }
+        }
+
+        always {
+            step([$class: 'Mailer',
+                notifyEveryUnstableBuild: true,
+                recipients: "ybmadhu404@gmail.com",
+                sendToIndividuals: true])
+        }
     }
 }
