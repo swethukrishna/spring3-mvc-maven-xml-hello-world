@@ -1,0 +1,15 @@
+---
+- hosts: server
+  gather_facts: false
+  become: yes
+  become_user: ubuntu
+  vars:
+    ansible_python_interpreter: "/usr/bin/env python3"
+  tasks:
+    # Create Kubernetes replica set
+    - name: Create deployment object
+      kubernetes.core.k8s:
+        state: present
+        src: deployment_ex.yaml
+      
+
