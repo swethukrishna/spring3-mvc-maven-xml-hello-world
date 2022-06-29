@@ -10,6 +10,7 @@
     - name: Create deployment object
       k8s:
         state: present
+        namespace: default
         src: deployment_ex.yaml
       
 

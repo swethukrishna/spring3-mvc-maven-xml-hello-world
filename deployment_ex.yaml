@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: node-web-app
-        image: https://849846292328.dkr.ecr.ap-south-1.amazonaws.com/javaapp:{{ version }}
+        image: 849846292328.dkr.ecr.ap-south-1.amazonaws.com/javaapp:{{ version }}
         ports:
         - containerPort: 8080
       imagePullSecrets:
