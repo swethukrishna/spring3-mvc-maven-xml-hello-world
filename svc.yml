@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-spring-webapp
+  labels:
+    app: spring-webapp
+spec:
+  type: NodePort
+  ports:
+  - port: 8080
+    nodePort: 30004
+    protocol: TCP
+  selector:
+    app: spring-webapp                             # Label selector
+

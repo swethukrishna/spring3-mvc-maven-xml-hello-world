@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-app-deploy
+  labels:
+    app: node-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: node-app
+  template:
+    metadata:
+      labels:
+        app: node-app
+    spec:
+      containers:
+      - name: node-web-app
+        image: https://849846292328.dkr.ecr.ap-south-1.amazonaws.com/javaapp:{{ version }}
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+      - name: ap-south-1-ecr-registry
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-svc
+  labels:
+    app: node-app
+    env: dev
+spec:
+  type: NodePort
+  ports:
+  - port: 8080
+    nodePort: 30003
+    protocol: TCP
+  selector:
+    app: node-app

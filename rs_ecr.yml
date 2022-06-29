@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: webapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: spring-webapp
+  template:
+    metadata:
+      labels:
+        app: spring-webapp
+    spec:
+      containers:
+      - name: springapp
+        image: 849846292328.dkr.ecr.ap-south-1.amazonaws.com/webapp:v1
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+      - name: ap-south-1-ecr-registry
+
