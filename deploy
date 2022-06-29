@@ -1,6 +1,6 @@
 [all:vars]
-ansible_ssh_private_key_file=/etc/ansible/jmsth34vpc.pem
-ansible_python_interpreter=/usr/bin/python3.8
+ansible_ssh_private_key_file=/home/ubuntu/jmsth35.pem
+ansible_python_interpreter=/usr/bin/python3
 ansible_user=ubuntu
 [server]
-172.31.10.164
+172.31.5.3
