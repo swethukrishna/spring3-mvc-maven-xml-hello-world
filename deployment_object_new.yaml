@@ -8,7 +8,7 @@
   tasks:
     # Create Kubernetes replica set
     - name: Create deployment object
-      kubernetes.core.k8s:
+      k8s:
         state: present
         src: deployment_ex.yaml
       
