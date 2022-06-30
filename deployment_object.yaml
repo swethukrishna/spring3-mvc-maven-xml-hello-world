@@ -10,7 +10,7 @@
     - name: Create replicaset object
       k8s:
         state: present
-        update_cache: yes
+        update_cache: apply
         definition:
           apiVersion: apps/v1
           kind: ReplicaSet
