@@ -8,6 +8,7 @@
   tasks:
     - name: delete replicaset
       shell: kubectl delete rs webapp
+      ignore_errors: yes
         
     # Create Kubernetes replica set
     - name: Create replicaset object
