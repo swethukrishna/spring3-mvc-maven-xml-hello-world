@@ -6,6 +6,9 @@
   vars:
     ansible_python_interpreter: "/usr/bin/env python3"
   tasks:
+    - name: delete replicaset
+      shell: kubectl delete rs webapp
+        
     # Create Kubernetes replica set
     - name: Create replicaset object
       k8s:
