@@ -9,7 +9,7 @@
     # Create Kubernetes replica set
     - name: Create replicaset object
       k8s:
-        state: patched
+        state: reload
         definition:
           apiVersion: apps/v1
           kind: ReplicaSet
