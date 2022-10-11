@@ -1,6 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"   
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0   
+<project xmlns="http://maven.apache.org/POM/4.0.0"   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0   
 http://maven.apache.org/xsd/maven-4.0.0.xsd"> 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.mkyong</groupId>
@@ -11,7 +9,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
   
 	
 	<properties>
-		 <java.version>1.8</java.version>
+		 <jdk.version>1.8</jdk.version>
 		<spring.version>3.2.13.RELEASE</spring.version>
 		<jstl.version>1.2</jstl.version>
 	</properties>
@@ -40,8 +38,8 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.3</version>
 				<configuration>
-					<source>${java.version}</source>
-					<target>${java.version}</target>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
 				</configuration>
 			</plugin>
 
