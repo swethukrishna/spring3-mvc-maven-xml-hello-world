@@ -14,5 +14,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build with Mavenn
+    - name: Build with Maven
       run: mvn package
