@@ -14,7 +14,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build with Mavens
+    - name: Build with Maven
       run: mvn package
     - name: Set Relase version
       id: vars
